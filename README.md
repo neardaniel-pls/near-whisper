@@ -9,6 +9,10 @@ A free and open source GUI for local Whisper audio transcription on Fedora Linux
 
 Near Whisper is a Gradio-based web interface for OpenAI's Whisper speech recognition model that runs entirely locally on your machine. No internet connection required after initial setup, ensuring complete privacy for your audio data.
 
+## Preview
+
+![Application Preview](images/app-preview.png)
+
 ## Features
 
 - 🎤 Microphone recording and file upload (single or batch)
@@ -67,7 +71,7 @@ The application will open at: http://127.0.0.1:7860
 | Small | 244MB | 244M | ~4x faster | Better | Important content |
 | Medium | 769MB | 769M | ~2x faster | High | Professional work |
 | Large | 1550MB | 1550M | 1x (baseline) | Best | Critical accuracy |
-| Turbo* | 809MB | 809M | ~8x faster | Very Good | Fast |
+| Turbo | 809MB | 809M | ~8x faster | Very Good | Fast |
 
 ### 🚀 Recommended Models for CPU:
 
@@ -102,7 +106,7 @@ Turbo works great on CPU and is accessible through the standard Whisper package!
 
 #### Upload Audio Files
 1. Click "Upload Audio Files" to select single or multiple files
-2. Supported formats: WAV, MP3, M4A, etc.
+2. Supported formats: WAV, MP3, etc.
 3. Click "Transcribe Audio" to start processing
 
 #### Record from Microphone
@@ -115,23 +119,6 @@ Turbo works great on CPU and is accessible through the standard Whisper package!
 - For multiple files: Shows results for each file with separators
 - Click "Export Results" to save (TXT for single, CSV for batch)
 
-## Performance Tips for CPU Users
-
-Since you're using CPU only (AMD CPU with integrated graphics):
-
-### Recommended Models for CPU:
-- **Tiny (32MB)**: Very fast, good for quick transcriptions
-- **Base (142MB)**: Best balance of speed and accuracy for daily use
-- **Small (466MB)**: Use if you need higher accuracy and don't mind waiting longer
-
-### CPU Optimization:
-- Use smaller models for faster processing
-- Close other applications while transcribing
-- Consider using shorter audio files for better performance
-- The app automatically detects no GPU and uses CPU optimization
-
-The application works great on CPU - millions of people use Whisper this way!
-
 ## Privacy
 
 - ✅ All processing happens locally
@@ -141,8 +128,8 @@ The application works great on CPU - millions of people use Whisper this way!
 
 ## Support
 
-- 🐛 [Report Bugs](https://github.com/neardaniel-pls/ai-apps/issues/new?template=bug_report.md)
-- 💡 [Request Features](https://github.com/neardaniel-pls/ai-apps/issues/new?template=feature_request.md)
+- 🐛 [Report Bugs](https://github.com/neardaniel-pls/near-whisper/issues/new?template=bug_report.md)
+- 💡 [Request Features](https://github.com/neardaniel-pls/near-whisper/issues/new?template=feature_request.md)
 
 ## License
 
