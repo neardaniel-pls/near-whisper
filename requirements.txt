@@ -1,0 +1,24 @@
+# Core dependencies for Local Whisper GUI
+# AI/ML Libraries
+openai-whisper==20250625
+torch==2.9.1+cpu
+torchaudio==2.9.1+cpu
+
+# User Interface
+gradio==5.49.1
+
+# Audio Processing
+librosa==0.11.0
+soundfile==0.13.1
+scipy==1.16.3
+
+# Data Processing
+numpy==2.3.5
+pandas==2.3.3
+
+# Utilities
+tqdm==4.67.1
+python-dotenv==1.2.1
+
+# Note: pyaudio is not included due to compilation issues on some systems.
+# The application uses Gradio's built-in audio handling instead.
