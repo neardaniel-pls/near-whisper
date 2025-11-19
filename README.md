@@ -24,7 +24,7 @@ Near Whisper is a Gradio-based web interface for OpenAI's Whisper speech recogni
 
 ## Prerequisites
 
-- **Fedora Linux**: Tested on Fedora 42+ but should work on recent versions
+- **Fedora Linux**: Tested on Fedora 43 but should work with everything else
 - **Python 3.8+**: Required for running the application
 - **4GB RAM minimum**: 8GB+ recommended for larger models
 - **Microphone**: Required for recording functionality
