@@ -137,8 +137,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Note**: For comprehensive Fedora system setup guide, see the companion [fedora-system-setup](https://github.com/neardaniel-pls/fedora-system-setup) repository.
+## Related Projects
 
-**Note**: For practical utility scripts for daily use, see the companion [fedora-user-scripts](https://github.com/neardaniel-pls/fedora-user-scripts) repository.
+Check out these other companion projects:
 
-**Note**: For a collection of guides for setting up AI on Fedora, see the companion [fedora-ai-setup](https://github.com/neardaniel-pls/fedora-ai-setup) repository.
+- **[fedora-system-setup](https://github.com/neardaniel-pls/fedora-system-setup)**: Comprehensive post-installation guide for Fedora Linux systems with essential configurations, repositories, drivers, and applications
+
+- **[fedora-user-scripts](https://github.com/neardaniel-pls/fedora-user-scripts)**: Collection of utility scripts optimized for Fedora Linux systems, focusing on system maintenance, security, and file management
+
+- **[fedora-ai-setup](https://github.com/neardaniel-pls/fedora-ai-setup)**: Collection of guides for setting up AI, machine learning, and LLM tools on Fedora Linux systems
