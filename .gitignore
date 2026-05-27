@@ -306,6 +306,9 @@ public
 tmp/
 temp/
 
+# Kilo CLI
+.kilo/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
