@@ -131,6 +131,27 @@ Turbo works great on CPU and is accessible through the standard Whisper package!
 - 🐛 [Report Bugs](https://github.com/neardaniel-pls/near-whisper/issues/new?template=bug_report.md)
 - 💡 [Request Features](https://github.com/neardaniel-pls/near-whisper/issues/new?template=feature_request.md)
 
+## Documentation
+
+### [Documentation Hub](docs/README.md)
+Guides and references
+
+### [Quick Start Guide](docs/QUICK_START.md)
+Get started in 5 minutes
+
+### [Guides](docs/guides/)
+- [Installation Guide](docs/guides/installation-guide.md) — System deps, models, CUDA
+- [Usage Guide](docs/guides/usage-guide.md) — Recording, upload, export
+
+### [FAQ](docs/FAQ.md)
+Common questions and troubleshooting
+
+### [Contributing Guide](CONTRIBUTING.md)
+How to contribute
+
+### [Changelog](CHANGELOG.md)
+History of changes
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
