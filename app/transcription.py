@@ -7,7 +7,6 @@ from datetime import datetime
 import torch
 import whisper
 
-
 MODEL_INFO = {
     "tiny": {
         "size": "39MB",

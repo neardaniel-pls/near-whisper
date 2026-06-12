@@ -38,8 +38,9 @@ Yes. Use the "Upload Audio Files" tab to select multiple files. Results are show
 ## Troubleshooting
 
 ### PortAudio error
+If you see PortAudio-related errors:
 ```bash
-sudo dnf install portaudio-devel
+sudo dnf install ffmpeg
 ```
 
 ### FFmpeg not found
@@ -52,7 +53,3 @@ Try a smaller model (Turbo or Medium). The Large model requires significant RAM.
 
 ### Model download fails
 Check your internet connection. Models are downloaded from Hugging Face on first use.
-
----
-
-**Last Updated**: 2026-05-25

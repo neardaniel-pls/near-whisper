@@ -2,19 +2,20 @@ import os
 
 from app.transcription import MODEL_INFO, TranscriptionEngine
 
-
 engine = TranscriptionEngine()
 
 
 def get_status_html(message, state="ready"):
-    color_map = {
-        "ready": ("status-ready", "&#9679;"),
-        "loading": ("status-loading", "&#9679;"),
-        "error": ("status-error", "&#10007;"),
-        "success": ("status-ready", "&#10003;"),
-    }
-    css_class, icon = color_map.get(state, color_map["ready"])
-    return f'<div class="status-badge {css_class}"><span class="status-dot"></span> {message}</div>'
+    css_class = {
+        "ready": "status-ready",
+        "loading": "status-loading",
+        "error": "status-error",
+        "success": "status-success",
+    }.get(state, "status-ready")
+    return (
+        f'<div class="status-badge {css_class}">'
+        f'<span class="status-dot"></span> {message}</div>'
+    )
 
 
 def get_model_info_html(model_name):
@@ -89,7 +90,10 @@ def transcribe_handler(audio_files, mic_audio, language, model_name, progress=No
         return status, _format_single(details)
 
     if not audio_files:
-        return get_status_html("No audio provided", "error"), "Upload audio files or record audio first."
+        return (
+            get_status_html("No audio provided", "error"),
+            "Upload audio files or record audio first.",
+        )
 
     audio_paths = [f if isinstance(f, str) else getattr(f, "name", str(f)) for f in audio_files]
 
@@ -138,7 +142,7 @@ def _format_single(details):
         return f"**Error:** {details['error']}\n"
 
     output = f"{details.get('transcription', '')}\n\n"
-    output += f"| Detail | Value |\n|---|---|\n"
+    output += "| Detail | Value |\n|---|---|\n"
     output += f"| Language | {details.get('language', 'unknown')} |\n"
     output += f"| Model | {details.get('model', 'unknown')} |\n"
     output += f"| Duration | {details.get('duration', 'unknown')} |\n"
@@ -210,6 +214,7 @@ def clear_all():
         "",
         None,
         get_status_html("Cleared", "ready"),
+        None,
     )
 
 

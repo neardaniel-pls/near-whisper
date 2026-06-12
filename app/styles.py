@@ -123,6 +123,11 @@ CSS = """
     color: #f87171;
     border: 1px solid rgba(239, 68, 68, 0.25);
 }
+.status-success {
+    background: rgba(34, 197, 94, 0.15);
+    color: #4ade80;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+}
 .status-dot {
     width: 6px;
     height: 6px;
@@ -139,6 +144,10 @@ CSS = """
 }
 .status-error .status-dot {
     background: #f87171;
+}
+.status-success .status-dot {
+    background: #4ade80;
+    box-shadow: 0 0 6px rgba(74, 222, 128, 0.6);
 }
 
 @keyframes pulse {
@@ -227,19 +236,5 @@ CSS = """
 .sidebar-section .gr-group,
 .sidebar-section .gr-panel {
     overflow: visible !important;
-}
-"""
-
-JS_COPY_TO_CLIPBOARD = """
-() => {
-    const textarea = document.querySelector('.output-area textarea');
-    if (textarea && textarea.value) {
-        navigator.clipboard.writeText(textarea.value).then(() => {
-            const btn = document.querySelector('.copy-btn button');
-            const original = btn.textContent;
-            btn.textContent = 'Copied!';
-            setTimeout(() => { btn.textContent = original; }, 1500);
-        });
-    }
 }
 """

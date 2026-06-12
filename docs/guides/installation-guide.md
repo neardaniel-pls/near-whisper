@@ -17,12 +17,12 @@ Detailed installation instructions for Near Whisper.
 
 **Fedora:**
 ```bash
-sudo dnf install -y python3 python3-pip python3-devel portaudio-devel portaudio ffmpeg gcc gcc-c++ make pkgconfig libsndfile-devel python3-setuptools
+sudo dnf install -y python3 python3-pip python3-devel ffmpeg gcc gcc-c++ make pkgconfig libsndfile-devel python3-setuptools
 ```
 
 **Ubuntu/Debian:**
 ```bash
-sudo apt install -y python3 python3-pip python3-dev portaudio19-dev ffmpeg gcc g++ make pkg-config libsndfile1-dev python3-setuptools
+sudo apt install -y python3 python3-pip python3-dev ffmpeg gcc g++ make pkg-config libsndfile1-dev python3-setuptools
 ```
 
 ### 2. Create Virtual Environment
@@ -76,8 +76,8 @@ Models are downloaded automatically on first use:
 
 ## Troubleshooting Installation
 
-### PortAudio build fails
-Ensure `portaudio-devel` (Fedora) or `portaudio19-dev` (Ubuntu) is installed.
+### FFmpeg build issues
+Ensure `ffmpeg` is installed: `sudo dnf install ffmpeg`.
 
 ### Torch installation fails
 Try installing CPU-only version first. If you need GPU support, ensure you have the correct CUDA toolkit version.

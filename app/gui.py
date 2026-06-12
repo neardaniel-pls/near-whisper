@@ -10,7 +10,6 @@ from app.handlers import (
     transcribe_handler,
     unload_model_handler,
 )
-from app.styles import CSS
 from app.transcription import AVAILABLE_MODELS, LANGUAGE_OPTIONS
 
 HEADER_HTML = """
@@ -72,7 +71,7 @@ def create_gui():
             with gr.Column(scale=3, min_width=600):
                 gr.HTML('<h3 style="margin: 0 0 0.5rem; font-weight: 600;">Audio Input</h3>')
 
-                with gr.Tabs() as tabs:
+                with gr.Tabs():
                     with gr.Tab("Upload Files"):
                         audio_files = gr.File(
                             label="Select audio files",
@@ -157,11 +156,18 @@ def create_gui():
             fn=export_handler,
             inputs=[transcription_output],
             outputs=[download_file, status_badge],
+        ).then(
+            fn=on_export_done,
+            inputs=[download_file, status_badge, last_export_file],
+            outputs=[download_file, last_export_file, status_badge],
         )
 
         clear_btn.click(
             fn=clear_all,
-            outputs=[audio_files, mic_input, transcription_output, download_file, status_badge],
+            outputs=[
+                audio_files, mic_input, transcription_output,
+                download_file, status_badge, last_export_file,
+            ],
         )
 
         gr.HTML(FOOTER_HTML)

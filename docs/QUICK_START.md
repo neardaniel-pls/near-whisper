@@ -11,7 +11,7 @@ Get Near Whisper running in 5 minutes.
 
 ### Step 1: System Dependencies
 ```bash
-sudo dnf install -y python3 python3-pip python3-devel portaudio-devel portaudio ffmpeg gcc gcc-c++ make pkgconfig libsndfile-devel python3-setuptools
+sudo dnf install -y python3 python3-pip python3-devel ffmpeg gcc gcc-c++ make pkgconfig libsndfile-devel python3-setuptools
 ```
 
 ### Step 2: Virtual Environment
@@ -59,7 +59,3 @@ Near Whisper works perfectly on CPU — GPU is optional for faster transcription
 - [Installation Guide](guides/installation-guide.md) — Detailed setup
 - [Usage Guide](guides/usage-guide.md) — All features
 - [FAQ](FAQ.md) — Common questions
-
----
-
-**Last Updated**: 2026-05-25

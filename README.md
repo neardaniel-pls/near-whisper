@@ -3,7 +3,7 @@
 A free and open source GUI for local Whisper audio transcription on Fedora Linux systems.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Fedora Version](https://img.shields.io/badge/Fedora-42%2B-blue.svg)](https://getfedora.org/)
+[![Fedora Version](https://img.shields.io/badge/Fedora-43%2B-blue.svg)](https://getfedora.org/)
 
 ## Overview
 
@@ -24,7 +24,7 @@ Near Whisper is a Gradio-based web interface for OpenAI's Whisper speech recogni
 
 ## Prerequisites
 
-- **Fedora Linux**: Tested on Fedora 43 but should work with everything else
+- **Fedora Linux**: Tested on Fedora 43 and 44
 - **Python 3.8+**: Required for running the application
 - **4GB RAM minimum**: 8GB+ recommended for larger models
 - **Microphone**: Required for recording functionality
@@ -37,7 +37,7 @@ Near Whisper is a Gradio-based web interface for OpenAI's Whisper speech recogni
 ### Step 1: Install System Dependencies
 ```bash
 sudo dnf update -y
-sudo dnf install -y python3 python3-pip python3-devel portaudio-devel portaudio ffmpeg gcc gcc-c++ make pkgconfig libsndfile-devel python3-setuptools
+sudo dnf install -y python3 python3-pip python3-devel ffmpeg gcc gcc-c++ make pkgconfig libsndfile-devel python3-setuptools
 ```
 
 ### Step 2: Create Virtual Environment
